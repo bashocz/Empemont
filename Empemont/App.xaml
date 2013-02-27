@@ -1,0 +1,137 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="Empemont.App"
+    StartupUri="WindowMain.xaml">
+    
+    <Application.Resources>
+         
+    	<RadialGradientBrush x:Key="WindowBackground" RadiusX="3" RadiusY="3" GradientOrigin="0,0" Center="-1,-1" >
+    		<GradientStop Color="#FFCACAE4" Offset="0.5"/>
+    		<GradientStop Color="#FF7C7C93" Offset="1"/>
+    		<GradientStop Color="White" Offset="0"/>
+    	</RadialGradientBrush>
+    	<SolidColorBrush x:Key="DeselectedSpeakersArea" Opacity="0.35" Color="#FFA50000"/>
+    	<SolidColorBrush x:Key="DeselectedSpeakersAreaBorder" Color="Maroon"/>
+    	<SolidColorBrush x:Key="SelectedSpeakersArea" Opacity="0.35" Color="#FF14A500"/>
+    	<SolidColorBrush x:Key="SelectedSpeakersAreaBorder" Color="#FF008014"/>
+    	<SolidColorBrush x:Key="UnselectedSpeakersArea" Opacity="0.35" Color="#FFD4D800"/>
+    	<SolidColorBrush x:Key="UnselectedSpeakersAreaBorder" Color="#FFA0A300"/>
+    	<SolidColorBrush x:Key="CalendarHeaderBackground" Color="#00000000"/>
+    	<SolidColorBrush x:Key="CalendarHeaderForeground" Color="Black"/>
+    	<LinearGradientBrush x:Key="CalendarDayHeaderBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+    		<GradientStop Color="#FF4C85FF" Offset="0.4"/>
+    		<GradientStop Color="#FF061641" Offset="1"/>
+    	</LinearGradientBrush>
+    	<LinearGradientBrush x:Key="CalendarDayHeaderDisabledBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+    		<GradientStop Color="#FFCACACA" Offset="0.4"/>
+    		<GradientStop Color="#FF414141" Offset="1"/>
+    	</LinearGradientBrush>
+    	<SolidColorBrush x:Key="CalendarDayBodyBackground" Color="#BFFFFFFF"/>
+    	<SolidColorBrush x:Key="CalendarDayBodyDisabledBackground" Color="#26000000"/>
+    	<SolidColorBrush x:Key="CalendarAnnouncementBackground" Color="#FF8484FF"/>
+    	<SolidColorBrush x:Key="BroudcastListItemBackground" Color="#BFFFE28E"/>
+    	<SolidColorBrush x:Key="CustomListItemBackground" Color="#BF8EFF91"/>
+    	<SolidColorBrush x:Key="AnnounceListItemBackground" Color="#BFFFE28E"/>
+		<SolidColorBrush x:Key="ListBorder" Color="#828790"/>
+         
+		<ControlTemplate x:Key="GlassButton" TargetType="{x:Type Button}">
+			<ControlTemplate.Resources>
+				<Storyboard x:Key="Timeline1">
+					<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+						<SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+					</DoubleAnimationUsingKeyFrames>
+				</Storyboard>
+				<Storyboard x:Key="Timeline2">
+					<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+						<SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+					</DoubleAnimationUsingKeyFrames>
+				</Storyboard>
+			</ControlTemplate.Resources>
+			<Border BorderBrush="#FFFFFFFF" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4">
+				<Border x:Name="border" Background="#7F000000" BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.507*"/>
+							<RowDefinition Height="0.493*"/>
+						</Grid.RowDefinitions>
+						<Border Opacity="0" HorizontalAlignment="Stretch" x:Name="glow" Width="Auto" Grid.RowSpan="2" CornerRadius="4,4,4,4">
+							<Border.Background>
+								<RadialGradientBrush>
+									<RadialGradientBrush.RelativeTransform>
+										<TransformGroup>
+											<ScaleTransform ScaleX="1.702" ScaleY="2.243"/>
+											<SkewTransform AngleX="0" AngleY="0"/>
+											<RotateTransform Angle="0"/>
+											<TranslateTransform X="-0.368" Y="-0.152"/>
+										</TransformGroup>
+									</RadialGradientBrush.RelativeTransform>
+									<GradientStop Color="#B28DBDFF" Offset="0"/>
+									<GradientStop Color="#008DBDFF" Offset="1"/>
+								</RadialGradientBrush>
+							</Border.Background>
+						</Border>
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Grid.RowSpan="2"/>
+						<Border HorizontalAlignment="Stretch" Margin="0,0,0,0" x:Name="shine" Width="Auto" CornerRadius="4,4,0,0">
+							<Border.Background>
+								<LinearGradientBrush EndPoint="0.494,0.889" StartPoint="0.494,0.028">
+									<GradientStop Color="#99FFFFFF" Offset="0"/>
+									<GradientStop Color="#33FFFFFF" Offset="1"/>
+								</LinearGradientBrush>
+							</Border.Background>
+						</Border>
+					</Grid>
+				</Border>
+			</Border>
+			<ControlTemplate.Triggers>
+				<Trigger Property="IsPressed" Value="True">
+					<Setter Property="Opacity" TargetName="shine" Value="0.4"/>
+					<Setter Property="Background" TargetName="border" Value="#CC000000"/>
+					<Setter Property="Visibility" TargetName="glow" Value="Hidden"/>
+				</Trigger>
+				<Trigger Property="IsMouseOver" Value="True">
+					<Trigger.EnterActions>
+						<BeginStoryboard Storyboard="{StaticResource Timeline1}"/>
+					</Trigger.EnterActions>
+					<Trigger.ExitActions>
+						<BeginStoryboard x:Name="Timeline2_BeginStoryboard" Storyboard="{StaticResource Timeline2}"/>
+					</Trigger.ExitActions>
+				</Trigger>
+			</ControlTemplate.Triggers>
+		</ControlTemplate>
+		
+		<Style x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
+			<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource ListBorder}"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+			<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+			<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+			<Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type ListBox}">
+						<Border x:Name="Bd" SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="1" CornerRadius="8">
+							<ScrollViewer Padding="{TemplateBinding Padding}" Focusable="false">
+								<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+							</ScrollViewer>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+							</Trigger>
+							<Trigger Property="IsGrouping" Value="true">
+								<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		
+    </Application.Resources>
+</Application>

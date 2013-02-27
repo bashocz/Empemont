@@ -1,0 +1,21 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" xmlns:local="clr-namespace:Empemont"
+	x:Class="Empemont.CalendarControl"
+	x:Name="UserControl"
+	d:DesignWidth="784" d:DesignHeight="464">
+
+	<Grid x:Name="LayoutRoot" d:LayoutOverrides="GridBox">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200"/>
+			<ColumnDefinition Width="0.75*"/>
+		</Grid.ColumnDefinitions>
+		<Custom:Calendar x:Name="wpfCalendar" Margin="8,32,0,0" SelectedDatesChanged="Calendar_SelectedDatesChanged" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+        
+		<local:Scheduler x:Name="scheduler" Margin="8" Grid.Column="1"/>
+	</Grid>
+</UserControl>

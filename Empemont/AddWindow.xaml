@@ -1,0 +1,15 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Empemont.AddWindow"
+	x:Name="Window"
+	Title="AddWindow"
+	Width="640" Height="480" Initialized="Window_Initialized">
+
+	<Grid Background="{DynamicResource WindowBackground}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.905*"/>
+			<RowDefinition Height="0.095*"/>
+		</Grid.RowDefinitions>
+	</Grid>
+</Window>

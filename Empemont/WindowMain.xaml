@@ -1,0 +1,56 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:Empemont"
+    x:Name="Window"
+    x:Class="Empemont.WindowMain"
+    Title="Empemont demo" WindowStartupLocation="CenterScreen" ScrollViewer.VerticalScrollBarVisibility="Disabled" d:DesignWidth="800" d:DesignHeight="598" Loaded="Window_Loaded">
+    <Grid Background="{DynamicResource WindowBackground}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="96"/>
+    		<RowDefinition/>
+    	</Grid.RowDefinitions>
+    	<Image Margin="0" Source="header0.jpg" VerticalAlignment="Top" HorizontalAlignment="Left">
+    		<Image.OpacityMask>
+    			<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    				<GradientStop Color="#00000000" Offset="1"/>
+    				<GradientStop Color="White"/>
+    			</LinearGradientBrush>
+    		</Image.OpacityMask>
+    	</Image>
+    	<Image HorizontalAlignment="Right" Margin="0,8,8,0" Source="empeTitle.gif" Stretch="None" VerticalAlignment="Top"/>
+    	<TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Text="Další relace - 10.4.2010 12:30" TextWrapping="Wrap" Margin="0,48,32,0" FontSize="32" FontWeight="Bold"/>
+    	<Button x:Name="btnCalendar" Margin="8,8,0,0" HorizontalAlignment="Left" Width="80" VerticalAlignment="Top" Height="80" Foreground="White" Template="{DynamicResource GlassButton}" Click="btnCalendar_Click">
+    		<StackPanel>
+    			<Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="iCal-icon.png" Stretch="None"/>
+    			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Kalendář" TextWrapping="Wrap"/>
+    		</StackPanel>
+    	</Button>
+    	<Button x:Name="btnAdd" Margin="104,8,0,0" HorizontalAlignment="Left" Width="80" Foreground="White" Template="{DynamicResource GlassButton}" VerticalAlignment="Top" Height="80" Click="btnAdd_Click">
+    		<StackPanel>
+    			<Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="sound-on-icon.png" Stretch="None"/>
+    			<TextBlock Text="Přidat" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    		</StackPanel>
+    	</Button>
+    	<Button x:Name="btnLive" Margin="200,8,0,0" Foreground="White" Template="{DynamicResource GlassButton}" Width="80" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnLive_Click">
+    		<StackPanel>
+    			<Image Source="sound-icon.png" Stretch="None" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    			<TextBlock Text="Živé vysílání" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    		</StackPanel>
+    	</Button>
+    	<Image HorizontalAlignment="Center" Margin="50" Grid.Row="1" VerticalAlignment="Center" Source="bezdratove_rozhlasy.jpg">
+    		<Image.OpacityMask>
+    			<RadialGradientBrush>
+    				<GradientStop Color="Black"/>
+    				<GradientStop Offset="1"/>
+    			</RadialGradientBrush>
+    		</Image.OpacityMask>
+    	</Image>
+    	<Grid x:Name="grMainPage" Margin="0" Grid.Row="1"/>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,150 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="Empemont.PageSpeakersControl"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Grid Margin="0">
+		<TabControl Margin="8" Background="{x:Null}">
+			<TabItem x:Name="TabFoto" Header="Foto" Background="{x:Null}">
+				<Grid Margin="8">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Image Margin="0" Source="vm-foto.png" Stretch="UniformToFill" Grid.RowSpan="10" Grid.ColumnSpan="10"/>
+					<Rectangle x:Name="SpeakersJurinka" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersKrasno" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="4" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersPolicna" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.ColumnSpan="3" Grid.Row="5" Grid.RowSpan="3" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersMesto" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="5" Grid.RowSpan="3" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersPodlesi" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="8" Grid.RowSpan="2" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersHrachovec" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="4" Grid.RowSpan="5" StrokeThickness="2"/>
+					<Rectangle x:Name="SpeakersKrhova" Fill="{DynamicResource DeselectedSpeakersArea}" Stroke="{DynamicResource DeselectedSpeakersAreaBorder}" Margin="3" Grid.Column="7" Grid.ColumnSpan="2" Grid.RowSpan="4" StrokeThickness="1"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TabBasic" Header="Plánek" Background="{x:Null}">
+				<Grid Margin="8">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Image Margin="0" Source="vm-zaklad.png" Grid.RowSpan="10" Grid.ColumnSpan="11" Stretch="Fill"/>
+					<Rectangle x:Name="SpeakersJurinka2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" StrokeThickness="2" Tag="30"/>
+					<Rectangle x:Name="SpeakersKrasno2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="4" StrokeThickness="2" Tag="20"/>
+					<Rectangle x:Name="SpeakersPolicna2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.ColumnSpan="4" Grid.Row="5" Grid.RowSpan="3" StrokeThickness="2" Tag="40"/>
+					<Rectangle x:Name="SpeakersMesto2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="5" Grid.RowSpan="3" StrokeThickness="2" Tag="10"/>
+					<Rectangle x:Name="SpeakersPodlesi2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="8" Grid.RowSpan="2" StrokeThickness="2" Tag="50"/>
+					<Rectangle x:Name="SpeakersHrachovec2" Fill="{DynamicResource SelectedSpeakersArea}" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="4" Grid.RowSpan="5" StrokeThickness="2" Tag="60"/>
+					<Rectangle x:Name="SpeakersKrhova2" Stroke="{DynamicResource SelectedSpeakersAreaBorder}" Margin="3" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="4" StrokeThickness="2" Tag="70" Fill="{DynamicResource SelectedSpeakersArea}"/>
+					<Ellipse x:Name="JurinkaHriste1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="2" Grid.Row="2" ToolTip="Juřinka - hřiště" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="31" StrokeThickness="2"/>
+					<Ellipse x:Name="JurinkaTocna1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Juřinka - točna" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="-3.938,-1.734" Margin="5,5,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="32" StrokeThickness="2"/>
+					<Ellipse x:Name="MestoNamesti11" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Město - náměstí 1" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="4" Grid.Row="5" Margin="40,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="11" StrokeThickness="2"/>
+					<Ellipse x:Name="MestoNamesti21" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Město - náměstí 2" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="4" Grid.Row="5" Margin="32,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="12" StrokeThickness="2"/>
+					<Ellipse x:Name="MestoNemocnice1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Město - nemocnice" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="5" Grid.Row="6" Margin="16,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="13" StrokeThickness="2"/>
+					<Ellipse x:Name="MestoVyhlidka1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Město - Vyhlídka" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="4" Grid.Row="6" Margin="16,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="14" StrokeThickness="2"/>
+					<Ellipse x:Name="MestoStepanov1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Město - Štěpánov" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="6" Grid.Row="6" Margin="16,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="15" StrokeThickness="2"/>
+					<Ellipse x:Name="KrasnoKrizna1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krásno - Křižná" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="4" Grid.Row="4" Margin="16,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="21" StrokeThickness="2"/>
+					<Ellipse x:Name="KrasnoNadrazi1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krásno - vlakové nádraží" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="3" Grid.Row="4" Margin="32,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="22" StrokeThickness="2"/>
+					<Ellipse x:Name="KrasnoAutobus1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krásno - autobusové nádraží" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="5" Grid.Row="4" Margin="16,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="23" StrokeThickness="2"/>
+					<Ellipse x:Name="KrasnoSklarny1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krásno - sklárny" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="6" Grid.Row="3" Margin="16,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="24" StrokeThickness="2"/>
+					<Ellipse x:Name="PolicnaSkola1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Poličná - škola" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="2" Grid.Row="5" Margin="32,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="41" StrokeThickness="2"/>
+					<Ellipse x:Name="PolicnaTocna1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Poličná - točna" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="1" Grid.Row="5" Margin="0,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="42" StrokeThickness="2"/>
+					<Ellipse x:Name="PolicnaKotlina1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Poličná - Kotlina" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="2" Grid.Row="6" Margin="24,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="43" StrokeThickness="2"/>
+					<Ellipse x:Name="PolicnaRevir1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Poličná - Revír" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="1" Grid.Row="7" Margin="32,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="44" StrokeThickness="2"/>
+					<Ellipse x:Name="PodlesiRybnik1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Podlesí - rybník" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="5" Grid.Row="8" Margin="8,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="51" StrokeThickness="2"/>
+					<Ellipse x:Name="PodlesiZbrojnice1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Podlesí - zbrojnice" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="5" Grid.Row="8" Margin="32,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="52" StrokeThickness="2"/>
+					<Ellipse x:Name="PodlesiPodhaji1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Podlesí - Podhájí" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="6" Grid.Row="9" Margin="32,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="53" StrokeThickness="2"/>
+					<Ellipse x:Name="HrachovecHriste1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Hrachovec - hřiště" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="8" Grid.Row="4" Margin="32,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="61" StrokeThickness="2"/>
+					<Ellipse x:Name="HrachovecTocna1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Hrachovec - točna" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="8" Grid.Row="8" Margin="16,8,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="62" StrokeThickness="2"/>
+					<Ellipse x:Name="KrhovaKulturak1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krhová - kulturní dům" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="7" Grid.Row="2" Margin="8,16,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="71" StrokeThickness="2"/>
+					<Ellipse x:Name="KrhovaJehlicna1" Fill="{DynamicResource SelectedSpeakersAreaBorder}" HorizontalAlignment="Left" ToolTip="Krhová - Jehličná" VerticalAlignment="Top" Width="16.2" Height="14.632" Grid.Column="9" Grid.Row="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Tag="72" StrokeThickness="2"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TabList" Header="Text" Background="{x:Null}">
+				<Grid>
+					<ScrollViewer Margin="8,8,291,8" Background="White" Tag="22">
+						<ScrollViewer.BorderBrush>
+							<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+						</ScrollViewer.BorderBrush>
+						<StackPanel>
+							<CheckBox x:Name="Mesto" Content="Město" Padding="4,0,0,0" Margin="8,8,0,0" Tag="10" IsChecked="True"/>
+							<CheckBox x:Name="MestoNamesti1" Margin="24,4,0,0" Content="Město - náměstí 1" Padding="4,0,0,0" Tag="11" IsChecked="True"/>
+							<CheckBox x:Name="MestoNamesti2" Margin="24,4,0,0" Content="Město - náměstí 2" Padding="4,0,0,0" Tag="12" IsChecked="True"/>
+							<CheckBox x:Name="MestoNemocnice" Margin="24,4,0,0" Content="Město - nemocnice" Padding="4,0,0,0" Tag="13" IsChecked="True"/>
+							<CheckBox x:Name="MestoVyhlidka" Margin="24,4,0,0" Content="Město - Vyhlídka" Padding="4,0,0,0" Tag="14" IsChecked="True"/>
+							<CheckBox x:Name="MestoStepanov" Margin="24,4,0,0" Content="Město - Štěpánov" Padding="4,0,0,0" Tag="15" IsChecked="True"/>
+							<CheckBox x:Name="Krasno" Margin="8,8,0,0" Content="Krásno" Padding="4,0,0,0" Tag="20" IsChecked="True"/>
+							<CheckBox x:Name="KrasnoKrizna" Margin="24,4,0,0" Content="Krásno - Křižná" Padding="4,0,0,0" Tag="21" IsChecked="True"/>
+							<CheckBox x:Name="KrasnoNadrazi" Margin="24,4,0,0" Content="Krásno - vlakové nádraží" Padding="4,0,0,0" IsChecked="True"/>
+							<CheckBox x:Name="KrasnoAutobus" Margin="24,4,0,0" Content="Krásno - autobusové nádraží" Padding="4,0,0,0" Tag="23" IsChecked="True"/>
+							<CheckBox x:Name="KrasnoSklarny" Margin="24,4,0,0" Content="Krásno - sklárny" Padding="4,0,0,0" Tag="24" IsChecked="True"/>
+							<CheckBox x:Name="Jurinka" Margin="8,8,0,0" Content="Juřinka" Padding="4,0,0,0" Tag="30" IsChecked="True"/>
+							<CheckBox x:Name="JurinkaHriste" Margin="24,4,0,0" Content="Juřinka - hřiště" Padding="4,0,0,0" Tag="31" IsChecked="True"/>
+							<CheckBox x:Name="JurinkaTocna" Margin="24,4,0,0" Content="Juřinka - točna" Padding="4,0,0,0" Tag="32" IsChecked="True"/>
+							<CheckBox x:Name="Policna" Margin="8,8,0,0" Content="Poličná" Padding="4,0,0,0" Tag="40" IsChecked="True"/>
+							<CheckBox x:Name="PolicnaSkola" Margin="24,4,0,0" Content="Poličná - základní škola" Padding="4,0,0,0" Tag="41" IsChecked="True"/>
+							<CheckBox x:Name="PolicnaTocna" Margin="24,4,0,0" Content="Poličná - točna" Padding="4,0,0,0" Tag="42" IsChecked="True"/>
+							<CheckBox x:Name="PolicnaKotlina" Margin="24,4,0,0" Content="Poličná - kotlina" Padding="4,0,0,0" Tag="43" IsChecked="True"/>
+							<CheckBox x:Name="PolicnaRevir" Margin="24,4,0,0" Content="Poličná - Revír" Padding="4,0,0,0" Tag="44" IsChecked="True"/>
+							<CheckBox x:Name="Podlesi" Margin="8,8,0,0" Content="Podlesí" Padding="4,0,0,0" Tag="50" IsChecked="True"/>
+							<CheckBox x:Name="PodlesiRybnik" Margin="24,4,0,0" Content="Podlesí - rybník" Padding="4,0,0,0" Tag="51" IsChecked="True"/>
+							<CheckBox x:Name="PodlesiZbrojnice" Margin="24,4,0,0" Content="Podlesí - zbrojnice" Padding="4,0,0,0" Tag="52" IsChecked="True"/>
+							<CheckBox x:Name="PodlesiPodhaji" Margin="24,4,0,0" Content="Podlesí - Podhájí" Padding="4,0,0,0" Tag="53" IsChecked="True"/>
+							<CheckBox x:Name="Hrachovec" Margin="8,8,0,0" Content="Hrachovec" Padding="4,0,0,0" Tag="60" IsChecked="True"/>
+							<CheckBox x:Name="HrachovecHriste" Margin="24,4,0,0" Content="Hrachovec - hřiště" Padding="4,0,0,0" Tag="61" IsChecked="True"/>
+							<CheckBox x:Name="HrachovecTocna" Margin="24,4,0,0" Content="Hrachovec - točna" Padding="4,0,0,0" Tag="62" IsChecked="True"/>
+							<CheckBox x:Name="Krhova" Margin="8,8,0,0" Content="Krhová" Padding="4,0,0,0" Tag="70" IsChecked="True"/>
+							<CheckBox x:Name="KrhovaKulturak" Margin="24,4,0,0" Content="Krhová - kulturní dům" Padding="4,0,0,0" Tag="71" IsChecked="True"/>
+							<CheckBox x:Name="KrhovaJehlicna" Margin="24,4,0,0" Content="krhová - Jehličná" Padding="4,0,0,0" Tag="72" IsChecked="True"/>
+						</StackPanel>
+					</ScrollViewer>
+				</Grid>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</UserControl>
